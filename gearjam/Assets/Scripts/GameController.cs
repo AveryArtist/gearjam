@@ -7,9 +7,11 @@ public class GameController : MonoBehaviour
 {
     private int position;
     private int speed;
+    private float power = 500.0;
 
     private float initialVelocity = 0.0;
     private float finalVelocity = 500.0;
+    private float currentVelocity = 0.0;
     private float accelerationRate = 10.0;
     private float decelerationRate = 50.0;
 
@@ -45,5 +47,5 @@ public class GameController : MonoBehaviour
         transform.Translate(0,0,power);
     }
 
-    
+
 }
