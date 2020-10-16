@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     private int position;
     private int speed;
     private float power = 500.0;
+    private int countdown = 3;
 
     private float initialVelocity = 0.0;
     private float finalVelocity = 500.0;
@@ -17,6 +18,7 @@ public class GameController : MonoBehaviour
 
     public Text velocityText;
     public Text positionText;
+    public Text countdownText;
 
     void Start(){
         position = PlayerPrefs.GetInt("position", 8);
@@ -29,9 +31,12 @@ public class GameController : MonoBehaviour
     }
 
     void BeginGame(){
-        speed = 0;
 
+        CountDown();
+
+        speed = 0;
         velocityText.text = speed;
+  
     }
 
     void accelerate(){
@@ -47,5 +52,14 @@ public class GameController : MonoBehaviour
         transform.Translate(0,0,power);
     }
 
+    void CountDown(){
 
+        for(int i = 0; i < countdown;i++){
+            countdownText.text = i;
+        }
+
+        countdownText.text = "GO";
+    }
+
+    
 }
