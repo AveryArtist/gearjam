@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private GameController gameController; //puxando o meu script pra cá, ai da pra tu puxar minhas funções
-    //no caso tu programa aqui dentro
+    //no caso tu programa aqui dentroteste
 
 
 
